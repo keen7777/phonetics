@@ -1,0 +1,6 @@
+streamlit
+pandas
+numpy
+st-aggrid
+GridOptionsBuilder
+random
