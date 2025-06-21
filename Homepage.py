@@ -19,5 +19,3 @@ data_de = {
 df_de = pd.DataFrame(data_de)
 st.set_page_config(layout="wide")
 st.markdown("### IPA Consonant Chart (DE)")
-
-
