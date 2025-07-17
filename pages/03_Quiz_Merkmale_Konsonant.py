@@ -76,13 +76,13 @@ with st.expander("📋 Referenz: ", expanded=False):
     st.dataframe(data_kons, use_container_width=True)
 
 features_kons_info = [
-    ('[±kons]', 'Ob ein Laut konsonantisch ist: +kons = Konsonant, –kons = Vokal oder Gleitlaut', ['b', 't', 'm', 'a', 'j']),
-    ('[±son]', 'Ob ein Laut sonorant ist: +son = wenig Hindernis, –son = starker Luftstromverschluss', ['m', 'n', 'l', 'a', 'p', 'k']),
-    ('[±kont]', 'Ob ein Laut kontinuierlich ist: +kont = Luftstrom fließt, –kont = unterbrochen', ['s', 'v', 'a', 't', 'b', 'k']),
-    ('[±nas]', 'Ob ein Laut nasal ist: +nas = Nasenlaut, –nas = oral', ['m', 'n', 'ŋ', 'b', 'd']),
+    ('[±kons]', 'Ob ein Laut konsonantisch ist: +kons = Konsonant, –kons = Vokal oder Gleitlaut', ['b', 't', 'm']),
+    ('[±son]', 'Ob ein Laut sonorant ist: +son = wenig Hindernis, –son = starker Luftstromverschluss', ['m', 'n', 'l', 'a']),
+    ('[±kont]', 'Ob ein Laut kontinuierlich ist: +kont = Luftstrom fließt, –kont = unterbrochen', ['s', 'v', 'a']),
+    ('[±nas]', 'Ob ein Laut nasal ist: +nas = Nasenlaut, –nas = oral', ['m', 'n', 'ŋ']),
     ('[LAB]', 'Artikulation mit den Lippen (labial)', ['p', 'b', 'm', 'f', 'v']),
-    ('[KOR]', 'Artikulation mit der Zungenspitze oder dem vorderen Zungenbereich (koronal)', ['t', 'd', 's', 'n', 'l', 'ʃ']),
-    ('[±ant]', 'Ob der Laut im vorderen Bereich (anterior) gebildet wird: +ant = vorne, –ant = hinten', ['t', 'd', 's', 'ʃ', 'ʒ']),
+    ('[KOR]', 'Artikulation mit der Zungenspitze oder dem vorderen Zungenbereich (koronal)', ['t', 'd', 's','z','ʃ', 'ʒ','n','j', 'l' ]),
+    ('[±ant]', 'Ob der Laut im vorderen Bereich (anterior) gebildet wird: +ant = vorne, –ant = hinten', ['s', 'z']),
     ('[DOR]', 'Artikulation mit dem Zungenrücken (dorsal)', ['k', 'g', 'ŋ', 'x', 'ç'])
 ]
 
