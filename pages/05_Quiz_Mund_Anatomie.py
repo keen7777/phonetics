@@ -30,7 +30,7 @@ questions = [
         "explanation": [
             "Die Zungenspitze berührt oder nähert sich anderen Artikulatoren.",
             "Alveolar: [t], [d], [n], [l], [s], [z]",
-            "Post-Alveolar: [ʃ], [ʒ]",
+            "Post-Alveolar: [ʃ], [ʒ]"
         ]
     },
     {
@@ -38,11 +38,85 @@ questions = [
         "image_path": "anotomy_img/tongue-back.png",
         "answer": "Zungenrücken",
         "explanation": [
-            "Der Zungenrücken artikuliert mit dem Gaumen oder Velum.",
+            "Der Zungenrücken ist der hintere Teil der Zunge. Der Zungenrücken liegt unter dem weichen Gaumen.",
             "Palatal: [ç], [j]",
             "Velar: [k], [g], [ŋ], [x]"
         ]
     },
+    {
+        "desc": "Benennen Sie die im Bild hervorgehobenen Sprechorgane",
+        "image_path": "anotomy_img/alveolar-ridge.png",
+        "answer": "Zahndamm",
+        "explanation": [
+            "Der Zahndamm(Alveolen) ist ein Wulst hinter den oberen Schneidezähnen.",
+            "Alveolar: [t], [d], [n], [l], [s], [z]",
+            "Post-Alveolar: [ʃ], [ʒ]"
+        ]
+    },
+    {
+        "desc": "Benennen Sie die im Bild hervorgehobenen Sprechorgane",
+        "image_path": "anotomy_img/nasal-cavity.png",
+        "answer": "Nasenraum",
+        "explanation": [
+            "Der Nasenraum liegt über dem Gaumen. Der Nasenraum dient als Resonanzraum, wenn das Velum gesenkt ist.",
+            "Bilabial; Alveolar; Velum: [m], [n], [ŋ]"
+        ]
+    },
+    {
+        "desc": "Benennen Sie die im Bild hervorgehobenen Sprechorgane",
+        "image_path": "anotomy_img/hard-palate.png",
+        "answer": "harter Gaumen",
+        "explanation": [
+            "Der harte Gaumen(Palate) ist der vordere Teil des Gaumens.",
+            "Palate: [ç], [j]"
+        ]
+    },
+    {
+        "desc": "Benennen Sie die im Bild hervorgehobenen Sprechorgane",
+        "image_path": "anotomy_img/soft-palate.png",
+        "answer": "weicher Gaumen",
+        "explanation": [
+            "Der weiche Gaumen (auch Velum oder Gaumensegel genannt) ist der hintere Teil des Gaumens.",
+            "Velum: [k], [g], [ŋ], [x]"
+        ]
+    },
+    {
+        "desc": "Benennen Sie die im Bild hervorgehobenen Sprechorgane",
+        "image_path": "anotomy_img/uvula.png",
+        "answer": "Zäpfchen",
+        "explanation": [
+            "Das Halszäpfchen (auch Uvula genannt) ist Teil des weichen Gaumens.(vibrieren)",
+            "Uvulum: [ʁ]"
+        ]
+    },
+    {
+        "desc": "Benennen Sie die im Bild hervorgehobenen Sprechorgane",
+        "image_path": "anotomy_img/pharynx.png",
+        "answer": "Rachen",
+        "explanation": [
+            "Rachen (Pharynx)Der Rachen ist der hintere Teil der Mundhöhle und ein Resonanzraum zwischen Mund, Nase und Kehlkopf. Er spielt eine Rolle beim Stimmklang und beim Schlucken.",
+            "Pharynx: null",
+            "Der Rachenraum (auch Pharynx genannt) liegt hinter dem Mundraum."
+        ]
+    },
+    {
+        "desc": "Benennen Sie die im Bild hervorgehobenen Sprechorgane",
+        "image_path": "anotomy_img/vocal-folds.png",
+        "answer": "Stimmlippen",
+        "explanation": [
+            "Die Stimmbänder (Stimmlippen) sind schwingungsfähige Strukturen im Kehlkopf. Die Bewegung der Stimmbänder erzeugt die Stimme bei Vokalen und stimmhaften Konsonanten.",
+            "stimmhaft/stimmlos"
+        ]
+    },
+    { 
+        "desc": "Benennen Sie die im Bild hervorgehobenen Sprechorgane(unter Stimmlippen)",
+        "image_path": "anotomy_img/epiglottis.png",
+        "answer": "Kehlkopf",
+        "explanation": [
+            "Kehlkopf (Larynx) Beinhaltet die Stimmlippen; steuert Stimmhaftigkeit.",
+            "Der Kehldeckel (auch Epiglottis genannt) befindet sich am Kehlkopfeingang."
+        ]
+    }
     # 可继续添加更多题目...
 ]
 
