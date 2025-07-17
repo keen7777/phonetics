@@ -26,8 +26,8 @@ data_kons = pd.DataFrame(symbol_empty, index=features_kons, columns=columns_kons
 for pair in [('p', 'b'), ('t', 'd'), ('k', 'g'), ('', 'm'), ('', 'n'), ('', 'ŋ'),
              ('f', 'v'), ('s', 'z'), ('ʃ', 'ʒ'), ('ç', ''), ('', 'R'), ('', 'l')]:
     data_kons.loc['[±kons]', pair] = symbol_correct 
-data_kons.loc['[±kons]',('h', '')] = symbol_wrong
-data_kons.loc['[±kons]',('', 'j')] = symbol_wrong
+# data_kons.loc['[±kons]',('h', '')] = symbol_wrong
+# data_kons.loc['[±kons]',('', 'j')] = symbol_wrong
 for pair in [('', 'm'), ('', 'n'), ('', 'ŋ'), ('', 'R'), ('', 'j'), ('', 'l')]:
     data_kons.loc['[±son]', pair] = symbol_correct
 for pair in [('f', 'v'), ('s', 'z'), ('ʃ', 'ʒ'), ('ç', ''), ('', 'R'), ('h', ''), ('', 'j')]:
@@ -39,7 +39,7 @@ for pair in [('p', 'b'), ('', 'm'), ('f', 'v')]:
 for pair in [('t', 'd'), ('', 'n'), ('s', 'z'), ('ʃ', 'ʒ'), ('', 'j'), ('', 'l')]:
     data_kons.loc['[KOR]', pair] = symbol_correct
 data_kons.loc['[±ant]', ('s', 'z')] = symbol_correct
-data_kons.loc['[±ant]', ('ʃ', 'ʒ')] = symbol_wrong
+# data_kons.loc['[±ant]', ('ʃ', 'ʒ')] = symbol_wrong
 for pair in [('k', 'g'), ('', 'ŋ'), ('ç', ''), ('', 'R')]:
     data_kons.loc['[DOR]', pair] = symbol_correct
 
