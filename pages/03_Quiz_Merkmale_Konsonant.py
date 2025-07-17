@@ -89,6 +89,29 @@ features_kons_info = [
 with st.expander("Erklärung"):
     st.write(features_kons_info)
 
+
+features_kons_info = [
+    ('[±kons]', 'Ob ein Laut konsonantisch ist: +kons = Konsonant, –kons = Vokal oder Gleitlaut', ['b', 't', 'm', 'a', 'j']),
+    ('[±son]', 'Ob ein Laut sonorant ist: +son = wenig Hindernis, –son = starker Luftstromverschluss', ['m', 'n', 'l', 'a', 'p', 'k']),
+    ('[±kont]', 'Ob ein Laut kontinuierlich ist: +kont = Luftstrom fließt, –kont = unterbrochen', ['s', 'v', 'a', 't', 'b', 'k']),
+    ('[±nas]', 'Ob ein Laut nasal ist: +nas = Nasenlaut, –nas = oral', ['m', 'n', 'ŋ', 'b', 'd']),
+    ('[LAB]', 'Artikulation mit den Lippen (labial)', ['p', 'b', 'm', 'f', 'v']),
+    ('[KOR]', 'Artikulation mit der Zungenspitze oder dem vorderen Zungenbereich (koronal)', ['t', 'd', 's', 'n', 'l', 'ʃ']),
+    ('[±ant]', 'Ob der Laut im vorderen Bereich (anterior) gebildet wird: +ant = vorne, –ant = hinten', ['t', 'd', 's', 'ʃ', 'ʒ']),
+    ('[DOR]', 'Artikulation mit dem Zungenrücken (dorsal)', ['k', 'g', 'ŋ', 'x', 'ç'])
+]
+
+# 创建 Markdown 表格头
+markdown_table = "| Merkmal | Beschreibung (Deutsch) | Beispiele |\n"
+markdown_table += "|---------|-------------------------|-----------|\n"
+
+# 填充表格内容
+for feature, desc, examples in features_kons_info:
+    examples_str = ", ".join(examples)
+    markdown_table += f"| `{feature}` | {desc} | {examples_str} |\n"
+
+# 展示在 Streamlit 中
+st.markdown(markdown_table, unsafe_allow_html=False)
 # ----------------------------
 # 3. 判断题逻辑 (带文字说明的选项 + 占位符)
 # ----------------------------
