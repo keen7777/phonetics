@@ -154,3 +154,24 @@ for v in short_vowels:
 st.subheader("Vokalen")
 st.dataframe(df_vokal, use_container_width=True)
 
+# 原始 IPA 表格数据
+data_de_ipa = {
+    "Artikulationsart/-ort": ["Plosive", "Nasal", "Trill", "Tap or Flap",
+                              "Fricative", "Lateral Frikative", "Approximant", "Lateral Approximant"],
+    "Bilabial": ["p || b", "m", "", "", "", "", "", ""],
+    "Labiodental": ["", "", "", "", "f || v", "", "", ""],
+    "Dental": ["", "", "", "", "", "", "", ""],
+    "Alveolar": ["t || d", "n", "", "", "s | z", "", "", "l"],
+    "Post_alveolar": ["", "", "", "", "ʃ || ʒ", "", "", ""],
+    "Retroflex": ["", "", "", "", "", "", "", ""],
+    "Palatal": ["", "", "", "", "ç", "", "j", ""],
+    "Velar": ["k || g", "ŋ", "", "", "x", "", "", ""],
+    "Uvular": ["", "", "", "", "ʁ", "", "", ""],
+    "Pharyngeal": ["", "", "", "", "", "", "", ""],
+    "Glottal": ["ʔ", "", "", "", "h", "", "", ""],
+}
+
+# 转为 DataFrame
+df_ipa = pd.DataFrame(data_de_ipa)
+st.subheader("IPA Chart(DE)")
+st.dataframe(df_ipa, use_container_width=True)

@@ -7,8 +7,7 @@ import pandas as pd
 st.sidebar.header("Benutzerdefinierte Symbole")
 symbol_correct = st.sidebar.text_input("Symbol für korrekt", value="t")
 symbol_wrong = st.sidebar.text_input("Symbol für falsch", value="f")
-symbol_check = st.sidebar.text_input("Symbol für Häkchen", value="1")
-symbol_empty = st.sidebar.text_input("Standardsymbol für leer", value="0")
+symbol_empty = st.sidebar.text_input("Standardsymbol für leer", value="--")
 symbol_unknown = st.sidebar.text_input("Platzhalter für unvollständig", value="?")
 symbol_wrong_mark = st.sidebar.text_input("Präfix zur Fehleranzeige", value="❌")
 
@@ -26,7 +25,9 @@ data_kons = pd.DataFrame(symbol_empty, index=features_kons, columns=columns_kons
 # ==========================
 for pair in [('p', 'b'), ('t', 'd'), ('k', 'g'), ('', 'm'), ('', 'n'), ('', 'ŋ'),
              ('f', 'v'), ('s', 'z'), ('ʃ', 'ʒ'), ('ç', ''), ('', 'R'), ('', 'l')]:
-    data_kons.loc['[±kons]', pair] = symbol_correct
+    data_kons.loc['[±kons]', pair] = symbol_correct 
+data_kons.loc['[±kons]',('h', '')] = symbol_wrong
+data_kons.loc['[±kons]',('', 'j')] = symbol_wrong
 for pair in [('', 'm'), ('', 'n'), ('', 'ŋ'), ('', 'R'), ('', 'j'), ('', 'l')]:
     data_kons.loc['[±son]', pair] = symbol_correct
 for pair in [('f', 'v'), ('s', 'z'), ('ʃ', 'ʒ'), ('ç', ''), ('', 'R'), ('h', ''), ('', 'j')]:
@@ -34,13 +35,13 @@ for pair in [('f', 'v'), ('s', 'z'), ('ʃ', 'ʒ'), ('ç', ''), ('', 'R'), ('h', 
 for pair in [('', 'm'), ('', 'n'), ('', 'ŋ')]:
     data_kons.loc['[±nas]', pair] = symbol_correct
 for pair in [('p', 'b'), ('', 'm'), ('f', 'v')]:
-    data_kons.loc['[LAB]', pair] = symbol_check
+    data_kons.loc['[LAB]', pair] = symbol_correct
 for pair in [('t', 'd'), ('', 'n'), ('s', 'z'), ('ʃ', 'ʒ'), ('', 'j'), ('', 'l')]:
-    data_kons.loc['[KOR]', pair] = symbol_check
+    data_kons.loc['[KOR]', pair] = symbol_correct
 data_kons.loc['[±ant]', ('s', 'z')] = symbol_correct
 data_kons.loc['[±ant]', ('ʃ', 'ʒ')] = symbol_wrong
 for pair in [('k', 'g'), ('', 'ŋ'), ('ç', ''), ('', 'R')]:
-    data_kons.loc['[DOR]', pair] = symbol_check
+    data_kons.loc['[DOR]', pair] = symbol_correct
 
 # ==========================
 # Umwandlung in einfache Spaltennamen
@@ -82,3 +83,7 @@ if st.button("Antworten einreichen und bewerten"):
     
     st.subheader("Ihre Eingaben (falsche Einträge markiert):")
     st.dataframe(feedback_df, use_container_width=True)
+
+    st.subheader("✅Correct answer:")
+    st.dataframe(correct, use_container_width=True)
+

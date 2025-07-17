@@ -2,10 +2,12 @@ import streamlit as st
 from PIL import Image
 
 # 1. 显示图像
-st.title("🔍 Lückentext: Beschriften Sie das Bild")
+st.title("🔍Lückentext: Beschrift das Bild")
 
 image = Image.open("anotomy_img/ohr_clear.png")  # 替换为你图片的路径
 st.image(image, caption="Bitte füllen Sie die Nummern 1 bis 14 aus", use_container_width=True)
+st.markdown("##### 1.not case senstive; 2.10, 11, 12 are latin; 3.feel free to use: ä, ö, ü, ß")
+
 
 # 2. 标准答案（按编号排列）
 correct_answers = [
@@ -49,3 +51,7 @@ if submitted:
     st.subheader(f"🎯 Ergebnis: {score}/14 korrekt")
     for f in feedback:
         st.write(f)
+
+    image_a = Image.open("anotomy_img/ohr.png")
+    with st.expander("check image with answers: "):
+        st.image(image_a, caption="Ohr Anatimie", use_container_width=True)    
