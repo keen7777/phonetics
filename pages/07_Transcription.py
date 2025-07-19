@@ -43,6 +43,7 @@ def get_german_word_info(word):
 st.title("📖 check transcription")
 
 word = st.text_input("please enter german word: case sensitive")
+st.markdown("##### ä, ö, ü, ß")
 
 if word:
     with st.spinner("🔍 searching..."):
